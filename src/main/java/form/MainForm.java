@@ -31,6 +31,8 @@ public class MainForm extends JFrame {
     private Data data;
 
     public MainForm() {
+        //TODO перенести лиссенеры в отдельные классы (убрать из конструктора)
+        //TODO Добавить метод сохранения сессии в текстовый файл и загрузки из него
         super("SFTP Client");
         data = new Data();
         setData(data);
