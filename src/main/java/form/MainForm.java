@@ -26,6 +26,7 @@ public class MainForm extends JFrame {
     private JTextField pathDirServer;
     private JLabel labelPathDirLocal;
     private JTextField pathFileLocal;
+    private JButton btnSelectFile;
 
     private Data data;
 
@@ -55,6 +56,19 @@ public class MainForm extends JFrame {
                     new SFTPFileUpload(data);
                 } catch (IOException e1) {
                     e1.printStackTrace();
+                }
+            }
+        });
+
+        btnSelectFile.addActionListener(new ActionListener() {  //обработка нажатия кнопки "выбор файла"
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser chooser = new JFileChooser();
+                chooser.setDialogTitle("Выбор файла");
+                int result = chooser.showOpenDialog(myPanel);
+                if (result == JFileChooser.APPROVE_OPTION) {
+                    System.out.println(chooser.getSelectedFile());
+                    pathFileLocal.setText(chooser.getSelectedFile().getAbsolutePath());
+//                    btnOk.setEnabled(true);
                 }
             }
         });
