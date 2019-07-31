@@ -36,7 +36,7 @@ public class MainForm extends JFrame {
         super("SFTP Client");
         data = new Data();
         setData(data);
-
+//        btnSelectFile.setIcon(new ImageIcon("resources/Icon_addFile.png"));
         this.getContentPane().add(myPanel);
 //        this.setBounds(100, 100, 400, 300);
         this.getRootPane().setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));

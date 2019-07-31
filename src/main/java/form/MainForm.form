@@ -134,7 +134,8 @@
                   </grid>
                 </constraints>
                 <properties>
-                  <text value=""/>
+                  <horizontalTextPosition value="0"/>
+                  <text value=". . ."/>
                 </properties>
               </component>
             </children>
